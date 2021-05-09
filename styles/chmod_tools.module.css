@@ -1,0 +1,17 @@
+.inputkun{
+    font-size:7vw;
+    -moz-transform-origin: right bottom;
+    -moz-transform: scale( 2 , 2 );
+    -webkit-transform-origin: right bottom;
+    -webkit-transform: scale( 2 , 2 );
+    margin-top: 2vw;
+}
+.labelkun{
+    margin-right: 3vw;
+    margin-top: 6vw;
+}
+.formkun{
+}
+.contkun{
+    margin-top:8vw;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "../styles/chmod_tools.module.css";
 class chmod_tools extends React.Component{
     constructor(props){
         super(props)
@@ -214,24 +215,29 @@ class chmod_tools extends React.Component{
             1 * this.state.x_oth
             )
         return(
-            <div>
-                <form>
-                    <input type="checkbox" onClick={this.changedCheckBoxRown} />Read Owner
-                    <input type="checkbox" onClick={this.changedCheckBoxRgrp} />Read Group
-                    <input type="checkbox" onClick={this.changedCheckBoxRoth} />Read Other
-                    <input type="checkbox" onClick={this.changedCheckBoxWown} />Write Owner
-                    <input type="checkbox" onClick={this.changedCheckBoxWgrp} />Write Group
-                    <input type="checkbox" onClick={this.changedCheckBoxWoth} />Write Other
-                    <input type="checkbox" onClick={this.changedCheckBoxXown} />Execute Owner
-                    <input type="checkbox" onClick={this.changedCheckBoxXgrp} />Execute Group
-                    <input type="checkbox" onClick={this.changedCheckBoxXoth} />Execute Other
-                    <input type="checkbox" onClick={this.changedCheckSUID} />SUID
-                    <input type="checkbox" onClick={this.changedCheckSGID} />SGID
-                    <input type="checkbox" onClick={this.changedCheckSticky} />Sticky
-                </form>
-                <div>
+            <div>   
+                <center>
+                    <form className={styles.formkun}>
+                    <input type="checkbox" className={styles.inputkun} onClick={this.changedCheckBoxRown} /><label className={styles.labelkun}>Read Owner</label>
+                    <input type="checkbox" className={styles.inputkun} onClick={this.changedCheckBoxWown} /><label className={styles.labelkun}>Write Owner</label>
+                    <input type="checkbox" className={styles.inputkun} onClick={this.changedCheckBoxXown} /><label className={styles.labelkun}>Execute Owner</label>
+                    <br/>
+                    <input type="checkbox" className={styles.inputkun} onClick={this.changedCheckBoxRgrp} /><label className={styles.labelkun}>Read Group</label>
+                    <input type="checkbox" className={styles.inputkun} onClick={this.changedCheckBoxWgrp} /><label className={styles.labelkun}>Write Group</label>
+                    <input type="checkbox" className={styles.inputkun} onClick={this.changedCheckBoxXgrp} /><label className={styles.labelkun}>Execute Group</label>
+                    <br/>
+                    <input type="checkbox" className={styles.inputkun} onClick={this.changedCheckBoxRoth} /><label className={styles.labelkun}>Read Other</label>
+                    <input type="checkbox" className={styles.inputkun} onClick={this.changedCheckBoxWoth} /><label className={styles.labelkun}>Write Other</label>
+                    <input type="checkbox" className={styles.inputkun} onClick={this.changedCheckBoxXoth} /><label className={styles.labelkun}>Execute Other</label>
+                    <br/>
+                    <input type="checkbox" className={styles.inputkun} onClick={this.changedCheckSUID} /><label className={styles.labelkun}>SUID</label>
+                    <input type="checkbox" className={styles.inputkun} onClick={this.changedCheckSGID} /><label className={styles.labelkun}>SGID</label>
+                    <input type="checkbox" className={styles.inputkun} onClick={this.changedCheckSticky} /><label className={styles.labelkun}>Sticky</label>
+                    </form>
+                <div className={styles.contkun}>
                     {contkun}
                 </div>
+                </center>
             </div>
         )
     }

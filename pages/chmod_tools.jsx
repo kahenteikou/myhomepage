@@ -25,6 +25,51 @@ class chmod_tools extends React.Component{
         this.changedCheckBoxXown=this.changedCheckBoxXown.bind(this);
         this.changedCheckBoxXgrp=this.changedCheckBoxXgrp.bind(this);
         this.changedCheckBoxXoth=this.changedCheckBoxXoth.bind(this);
+        this.changedCheckSUID=this.changedCheckSUID.bind(this);
+        this.changedCheckSticky=this.changedCheckSticky.bind(this);
+        this.changedCheckSGID=this.changedCheckSGID.bind(this);
+    }
+    changedCheckSticky(event){
+        let rkun;
+        if(event.target.checked){
+            rkun=1;
+        }else{
+            rkun=0;
+        }
+        this.setState(
+            {
+                sticky:rkun
+            }
+        )
+        console.log(event.target.checked)
+    }
+    changedCheckSGID(event){
+        let rkun;
+        if(event.target.checked){
+            rkun=1;
+        }else{
+            rkun=0;
+        }
+        this.setState(
+            {
+                sgid:rkun
+            }
+        )
+        console.log(event.target.checked)
+    }
+    changedCheckSUID(event){
+        let rkun;
+        if(event.target.checked){
+            rkun=1;
+        }else{
+            rkun=0;
+        }
+        this.setState(
+            {
+                suid:rkun
+            }
+        )
+        console.log(event.target.checked)
     }
     changedCheckBoxWown(event){
         let rkun;
@@ -180,6 +225,9 @@ class chmod_tools extends React.Component{
                     <input type="checkbox" onClick={this.changedCheckBoxXown} />Execute Owner
                     <input type="checkbox" onClick={this.changedCheckBoxXgrp} />Execute Group
                     <input type="checkbox" onClick={this.changedCheckBoxXoth} />Execute Other
+                    <input type="checkbox" onClick={this.changedCheckSUID} />SUID
+                    <input type="checkbox" onClick={this.changedCheckSGID} />SGID
+                    <input type="checkbox" onClick={this.changedCheckSticky} />Sticky
                 </form>
                 <div>
                     {contkun}

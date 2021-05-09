@@ -1,0 +1,15 @@
+.cardout{
+    border: solid;
+    margin-bottom: 3vw;
+}
+.bigstrtitle{
+    font-size: 8vw;
+    text-align: center;
+    transform: skewX(-20deg);
+}
+.cardobjkun{
+    font-size: 2vw;
+    text-align: center;
+    margin-top:5vw;
+    margin-bottom: 3vw;
+}

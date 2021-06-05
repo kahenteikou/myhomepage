@@ -7,7 +7,7 @@ class TitleHeader extends React.Component{
     render(){
         return(
             <div className="TitleHeader">
-                <marquee behavior="scroll" scrolldelay="50" > 
+                <marquee behavior="scroll" scrolldelay="10" > 
                     <div className={styles.LargeHeader}>
                         kokkiemouse's homepage
                     </div>
